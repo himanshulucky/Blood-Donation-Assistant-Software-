@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="500.0" minWidth="500.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="profile.profileViewController">
+   <children>
+      <Label layoutY="407.0" prefHeight="59.0" prefWidth="500.0" style="-fx-background-color: #c50000;" />
+      <Label layoutY="34.0" prefHeight="59.0" prefWidth="500.0" style="-fx-background-color: #c50000;" />
+      <Label layoutX="181.0" layoutY="48.0" text="Control  Panel" textFill="WHITE">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgregister" fitHeight="84.0" fitWidth="82.0" layoutX="56.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@user.png" />
+         </image></ImageView>
+      <ImageView fx:id="imgdonation" fitHeight="84.0" fitWidth="82.0" layoutX="209.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@user.png" />
+         </image></ImageView>
+      <ImageView fx:id="imgavaliable" fitHeight="84.0" fitWidth="82.0" layoutX="355.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@user.png" />
+         </image></ImageView>
+      <Button layoutX="59.0" layoutY="212.0" mnemonicParsing="false" onAction="#doregister" prefHeight="25.0" prefWidth="77.0" text="Register" textFill="#c50000" />
+      <Button layoutX="212.0" layoutY="212.0" mnemonicParsing="false" onAction="#dodonation" prefHeight="25.0" prefWidth="77.0" text="Donate" textFill="#c50000" />
+      <Button layoutX="59.0" layoutY="357.0" mnemonicParsing="false" onAction="#doavaliable" prefHeight="25.0" prefWidth="77.0" text="Avaliable" textFill="#c50000" />
+      <ImageView fx:id="imghistory" fitHeight="84.0" fitWidth="82.0" layoutX="64.0" layoutY="262.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@user.png" />
+         </image></ImageView>
+      <ImageView fx:id="imgissuse" fitHeight="84.0" fitWidth="82.0" layoutX="214.0" layoutY="262.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@user.png" />
+         </image></ImageView>
+      <ImageView fx:id="imgchk" fitHeight="84.0" fitWidth="82.0" layoutX="363.0" layoutY="262.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@user.png" />
+         </image></ImageView>
+      <Button layoutX="217.0" layoutY="357.0" mnemonicParsing="false" onAction="#dohistory" prefHeight="25.0" prefWidth="77.0" text="Admin" textFill="#c50000" />
+      <Button layoutX="366.0" layoutY="212.0" mnemonicParsing="false" onAction="#doissuse" text="Issue Blood" textFill="#c50000" />
+      <Button layoutX="358.0" layoutY="357.0" mnemonicParsing="false" onAction="#dochk" prefHeight="25.0" prefWidth="77.0" text="Logout" textFill="#c50000" />
+      <Button layoutX="189.0" layoutY="424.0" mnemonicParsing="false" onAction="#domeet" text="Meet the Developer" textFill="#c50000" />
+   </children>
+</AnchorPane>

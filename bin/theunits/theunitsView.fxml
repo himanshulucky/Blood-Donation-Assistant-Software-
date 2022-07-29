@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="500.0" minWidth="500.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="theunits.theunitsViewController">
+   <children>
+      <Label layoutY="392.0" prefHeight="50.0" prefWidth="500.0" style="-fx-background-color: #c50000;" />
+      <Label layoutY="29.0" prefHeight="50.0" prefWidth="500.0" style="-fx-background-color: #c50000;" />
+      <Label layoutX="52.0" layoutY="123.0" text="Registered Mobile Number" textFill="#c50000">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="chkmobile" editable="true" layoutX="52.0" layoutY="157.0" prefWidth="150.0" promptText="ex 9876543219" />
+      <Button accessibleHelp="9876543219" layoutX="230.0" layoutY="157.0" mnemonicParsing="false" onAction="#btnsearch" text="Search" textFill="#c50000" />
+      <Label layoutX="52.0" layoutY="205.0" text="Blood Group" textFill="#c50000">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtbloodg" layoutX="53.0" layoutY="239.0" promptText="ex 9876543219" />
+      <ImageView fx:id="imgshow" fitHeight="140.0" fitWidth="149.0" layoutX="300.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true" />
+      <DatePicker fx:id="txtdonation" layoutX="52.0" layoutY="326.0" promptText="date" />
+      <Button layoutX="132.0" layoutY="405.0" mnemonicParsing="false" onAction="#btnuploaddata" prefHeight="18.0" prefWidth="111.0" text="Donate" textFill="#c50000" />
+      <Button layoutX="254.0" layoutY="405.0" mnemonicParsing="false" onAction="#donew" prefHeight="17.0" prefWidth="111.0" text="Reset" textFill="#c50000" />
+      <Label layoutX="54.0" layoutY="294.0" text="Date of Donation" textFill="#c50000">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="175.0" layoutY="36.0" text="Donate Blood" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="500.0" minWidth="500.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tableview.tableresultviewController">
+   <children>
+      <Label layoutY="407.0" prefHeight="49.0" prefWidth="500.0" style="-fx-background-color: #c50000;" />
+      <Label layoutY="25.0" prefHeight="49.0" prefWidth="500.0" style="-fx-background-color: #c50000;" />
+      <Label layoutX="184.0" layoutY="33.0" text="Donor Details" textFill="WHITE">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tabler" layoutX="72.0" layoutY="98.0" onSort="#dotable" prefHeight="288.0" prefWidth="358.0" />
+      <Button layoutX="143.0" layoutY="419.0" mnemonicParsing="false" onAction="#doData" prefHeight="25.0" prefWidth="94.0" text="Tabulate" textFill="#c50000" />
+      <Button layoutX="266.0" layoutY="419.0" mnemonicParsing="false" onAction="#doExpotp" text="Export to Excel" textFill="#c50000" />
+   </children>
+</AnchorPane>

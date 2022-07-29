@@ -1,0 +1,161 @@
+package DonorMaster;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.stage.FileChooser;
+import javafx.stage.FileChooser.ExtensionFilter;
+
+public class DonorMasterViewController {
+
+	
+	FileChooser fc=new FileChooser();
+	File f;
+    @FXML
+    private ResourceBundle resources;
+
+    @FXML
+    private URL location;
+
+    @FXML
+    private ComboBox<String> chkbloodg;
+
+    @FXML
+    private ComboBox<String> chkgender;
+
+    @FXML
+    private ImageView imgshow;
+
+    @FXML
+    private TextField txtaddress;
+
+    @FXML
+    private TextField txtage;
+
+    @FXML
+    private TextField txtcity;
+
+    @FXML
+    private TextField txtdisease;
+
+    @FXML
+    private TextField txtname;
+
+    @FXML
+    private TextField txtnumber;
+    
+    Connection con;
+    PreparedStatement pst;
+
+    @FXML
+    void dobrowse(ActionEvent event) {
+    	
+//    	fc.setTitle("Choose File to be uploaded");
+    	
+    	fc.getExtensionFilters().add(new ExtensionFilter("JPG FILES", "*.jpg"));
+    	f=fc.showOpenDialog(null);
+    	
+//    	FileChooser selectFile=fc.showOpenDialog(null);
+    	
+//    	Image img=new Image(selectFile.getAbsolutePath());
+//    	picpath=selectFile.getAbsolutePath();
+    	if(f!=null) {
+    	
+    		try {
+				Image img=new Image(new FileInputStream(f.getAbsoluteFile()));
+				imgshow.setImage(img);
+				
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+//    		prev.setImage(img);
+    	}
+    }
+
+    @FXML
+    void docancel(ActionEvent event) {
+    	
+    }
+
+    @FXML
+    void dochkblood(ActionEvent event) {
+
+    }
+
+    @FXML
+    void donew(ActionEvent event) {
+
+    }
+
+    @FXML
+    void doregister(ActionEvent event) {
+    	try {
+    		String s= f.getAbsolutePath();
+			pst=con.prepareStatement("insert into donor values(?,?,?,?,?,?,?,?,?,current_date())");
+			pst.setString(1,txtnumber.getText());
+//			Image image=new Image		
+			pst.setString(2,s);
+			pst.setString(3,txtname.getText());
+			pst.setInt(4, Integer.parseInt(chkgender.getEditor().getText()));
+			pst.setString(5,txtaddress.getText());
+			pst.setString(6,txtcity.getText());
+			pst.setInt(7, Integer.parseInt(chkbloodg.getEditor().getText()));
+			pst.setString(8,txtage.getText());
+			pst.setString(9,txtdisease.getText());
+			pst.executeUpdate();
+//			showMsg("Record Inserted Successfullyyyy");
+			
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    }
+
+    @FXML
+    void doupdate(ActionEvent event) {
+    	try {
+//			pst=con.prepareStatement("update donor set name=?,txtname=?,chkgender=?,per=?,name=?,per=?,name=?,per=? where txtnumber=?");
+			
+//			pst.setString(1, PicPath.getText());
+			pst.setString(2,txtname.getText());
+			pst.setInt(3, Integer.parseInt(chkgender.getEditor().getText()));
+			pst.setString(4,txtaddress.getText());
+			pst.setString(5,txtcity.getText());
+			pst.setInt(6, Integer.parseInt(chkbloodg.getEditor().getText()));
+			pst.setString(7,txtage.getText());
+			pst.setString(8,txtdisease.getText());
+			pst.executeUpdate();
+			pst.setString(10,txtnumber.getText());
+			int count=pst.executeUpdate();
+//			if(count==0)
+//				showMsg("Inavlid Rollno");
+//			else
+				
+//			showMsg("Record Inserted Successfullyyyy");
+			
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+    }
+
+    @FXML
+    void initialize() {
+      DataBaseConnection.doconnect();
+
+    }
+
+}

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="500.0" minWidth="500.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bloodunitavaliable.bloodunitsavaliableViewController">
+   <children>
+      <Label layoutY="38.0" prefHeight="50.0" prefWidth="500.0" style="-fx-background-color: #c50000;" />
+      <Label layoutX="146.0" layoutY="46.0" prefHeight="34.0" prefWidth="209.0" text="Blood Units Avaliable" textFill="WHITE">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="69.0" layoutY="124.0" text="O+" textFill="#c50000">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtOp" editable="false" layoutX="69.0" layoutY="153.0" prefHeight="25.0" prefWidth="149.0" />
+      <Label layoutX="283.0" layoutY="124.0" text="O-" textFill="#c50000">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtOn" editable="false" layoutX="283.0" layoutY="151.0" />
+      <Label layoutX="71.0" layoutY="212.0" text="A+" textFill="#c50000">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtap" editable="false" layoutX="72.0" layoutY="237.0" />
+      <Label layoutX="284.0" layoutY="212.0" text="A-" textFill="#c50000">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtan" editable="false" layoutX="283.0" layoutY="237.0" />
+      <Label layoutX="72.0" layoutY="288.0" text="B+" textFill="#c50000">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtbp" editable="false" layoutX="72.0" layoutY="313.0" />
+      <Label layoutX="285.0" layoutY="288.0" text="B-" textFill="#c50000">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtbn" editable="false" layoutX="283.0" layoutY="313.0" />
+      <Label layoutX="72.0" layoutY="365.0" text="AB+" textFill="#c50000">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtabp" editable="false" layoutX="72.0" layoutY="390.0" />
+      <Label layoutX="285.0" layoutY="365.0" text="AB-" textFill="#c50000">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtabn" editable="false" layoutX="283.0" layoutY="390.0" />
+   </children>
+</AnchorPane>

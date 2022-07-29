@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="500.0" minWidth="500.0" prefHeight="513.0" prefWidth="512.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DonorMaster.DonorMasterViewController">
+   <children>
+      <Label layoutY="421.0" prefHeight="54.0" prefWidth="512.0" style="-fx-background-color: #c50000;" />
+      <Label layoutY="39.0" prefHeight="48.0" prefWidth="512.0" style="-fx-background-color: #c50000;" />
+      <Label layoutX="140.0" layoutY="43.0" prefHeight="40.0" prefWidth="238.0" text="Donor Registration" textFill="WHITE">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtnumber" layoutX="32.0" layoutY="140.0" prefHeight="25.0" prefWidth="216.0" />
+      <ImageView fx:id="imgshow" fitHeight="99.0" fitWidth="113.0" layoutX="367.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Dropbox/nodejs-fullstack-june-2022/pics/user.png" />
+         </image></ImageView>
+      <Label layoutX="32.0" layoutY="118.0" prefHeight="25.0" prefWidth="125.0" text="Mobile Number" textFill="#c50000">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtname" layoutX="32.0" layoutY="206.0" prefHeight="25.0" prefWidth="216.0" />
+      <Button layoutX="389.0" layoutY="206.0" mnemonicParsing="false" onAction="#dobrowse" text="Browse" textFill="#c50000" />
+      <Label layoutX="32.0" layoutY="181.0" prefHeight="17.0" prefWidth="90.0" text="Name" textFill="#c50000">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="266.0" layoutY="181.0" text="Gender" textFill="#c50000">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtaddress" layoutX="32.0" layoutY="279.0" prefHeight="25.0" prefWidth="253.0" />
+      <TextField fx:id="txtcity" layoutX="294.0" layoutY="279.0" prefHeight="25.0" prefWidth="141.0" />
+      <Label layoutX="32.0" layoutY="255.0" text="Address" textFill="#c50000">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="294.0" layoutY="255.0" text="City/Town" textFill="#c50000">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="36.0" layoutY="327.0" text="Blood Group" textFill="#c50000">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="153.0" layoutY="327.0" text="Age" textFill="#c50000">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="265.0" layoutY="327.0" text="Disease if any" textFill="#c50000">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtage" layoutX="153.0" layoutY="357.0" prefHeight="25.0" prefWidth="100.0" />
+      <TextField fx:id="txtdisease" layoutX="265.0" layoutY="357.0" prefHeight="25.0" prefWidth="169.0" />
+      <Button layoutX="99.0" layoutY="435.0" mnemonicParsing="false" onAction="#donew" prefHeight="25.0" prefWidth="68.0" text="Clear" textFill="#c50000" />
+      <Button layoutX="192.0" layoutY="435.0" mnemonicParsing="false" onAction="#doregister" prefHeight="25.0" prefWidth="68.0" text="Register" textFill="#c50000" />
+      <Button layoutX="283.0" layoutY="435.0" mnemonicParsing="false" onAction="#doupdate" prefHeight="25.0" prefWidth="68.0" text="Update" textFill="#c50000" />
+      <Button layoutX="383.0" layoutY="435.0" mnemonicParsing="false" onAction="#docancel" prefHeight="25.0" prefWidth="68.0" text="Delete" textFill="#c50000" />
+      <ComboBox fx:id="chkbloodg" editable="true" layoutX="36.0" layoutY="357.0" onAction="#dochkblood" prefHeight="25.0" prefWidth="107.0" />
+      <ComboBox fx:id="chkgender" editable="true" layoutX="265.0" layoutY="206.0" prefHeight="25.0" prefWidth="107.0" />
+   </children>
+</AnchorPane>
